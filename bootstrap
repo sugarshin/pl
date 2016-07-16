@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+
+print_header() {
+  printf "\e[34m"
+  echo '---------------------------------------------------------------------------------------------------------------------'
+  echo '                                            ______     ______   __                                                   '
+  echo '                                           /\  == \   /\  == \ /\ \                                                  '
+  echo '                                           \ \  __<   \ \  _-/ \ \ \____                                             '
+  echo '                                            \ \_\ \_\  \ \_\    \ \_____\                                            '
+  echo '                                             \/_/ /_/   \/_/     \/_____/                                            '
+  echo '                                                                                                                     '
+  echo '                                               RPID PROTOTYPING LIGHT                                                '
+  echo '                                                                                                                     '
+  echo '---------------------------------------------------------------------------------------------------------------------'
+  printf "\e[0m\n"
+}
+
+install_modules() {
+  echo 'Installing modules...'
+  npm i -D babel-core babel-loader babel-polyfill babel-preset-es2015 babel-preset-es2016 \
+    babel-preset-react babel-preset-stage-2 jade webpack webpack-dev-server
+  npm i -S mirror-key-value react react-dom react-router whatwg-fetch
+}
+
+rms() {
+  echo 'Ready...'
+  rm -rf .git bootstrap
+}
+
+main() {
+  print_header
+
+  install_modules
+
+  rms
+
+  echo 'Done !!!!'
+}
+
+main

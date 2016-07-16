@@ -1,0 +1,16 @@
+{
+  "name": "pl",
+  "description": "rapid prototyping light with webpack",
+  "scripts": {
+    "start": "npm run clean:dev && npm run template:dev | npm run dev-server",
+    "dev-server": "webpack-dev-server --progress",
+    "clean:dev": "if [ -d build-dev ]; then rm -rf build-dev; fi",
+    "clean:build": "if [ -d build ]; then rm -rf build; fi",
+    "template:dev": "jade -o build-dev -Pw src/template/index.jade",
+    "template:build": "jade -o build src/template/index.jade",
+    "webpack": "webpack",
+    "build": "NODE_ENV=production sh build.sh"
+  },
+  "author": "sugarshin",
+  "license": "MIT"
+}

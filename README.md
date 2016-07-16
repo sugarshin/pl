@@ -15,7 +15,8 @@
 
 Bootstrap
 
-```
+```zsh
+mkdir example && cd $_ && hub clone pl --depth 1 .
 ./bootstrap
 ```
 

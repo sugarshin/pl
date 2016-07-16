@@ -18,8 +18,8 @@ print_header() {
 install_modules() {
   echo 'Installing modules...'
   npm i -D babel-core babel-loader babel-polyfill babel-preset-es2015 babel-preset-es2016 \
-    babel-preset-react babel-preset-stage-2 jade webpack webpack-dev-server
-  npm i -S mirror-key-value react react-dom react-router whatwg-fetch
+    babel-preset-react babel-preset-stage-2 jade webpack webpack-dev-server \
+    react react-dom react-router whatwg-fetch
 }
 
 rms() {
